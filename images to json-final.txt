@@ -1,0 +1,10 @@
+var fs = require('fs');
+
+for (var i = 0; i <= 3; i++) {
+  var json = {}
+  json.name = "Token #" + i;
+  json.description = "This is the Hardhat description for token #" + i;
+  json.image = "ipfs://bafybeig7723ymya4zaeddlzql2wsgpbjhglh7luuvxnmritk7anvmmtyoa/" + i + ".jpg";
+
+  fs.writeFileSync('' + i, JSON.stringify(json));
+}
